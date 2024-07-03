@@ -42,7 +42,8 @@ const AuthLayout = () => {
               target='_blank'
               className='text-gray-800 text-hover-primary'
             >
-              {STRING.DATING_APP}
+              Imperia-fianance
+              {/* {STRING.DATING_APP} */}
             </a>
           </div>
         </div>
@@ -59,27 +60,27 @@ const AuthLayout = () => {
         <div className='d-flex flex-column flex-center py-15 px-5 px-md-15 w-100'>
           {/* begin::Logo */}
           <Link to='/' className='mb-12'>
-            <img alt='Logo' src={toAbsoluteUrl('media/AllLogos/Mainlogologin.svg')} className='h-150px' />
+            {/* <img alt='Logo' src={toAbsoluteUrl('media/AllLogos/Mainlogologin.svg')} className='h-150px' /> */}
           </Link>
           {/* end::Logo */}
 
           {/* begin::Image */}
-          <img
+          {/* <img
             className='mx-auto w-275px w-md-50 w-xl-500px mb-10 mb-lg-20'
             src={toAbsoluteUrl('media/misc/Loginpagephoto.png')}
             alt=''
-          />
+          /> */}
           {/* end::Image */}
 
           {/* begin::Title */}
           <h1 className='text-white fs-2qx fw-bolder text-center mb-7'>
-          {STRING.DATING_APP_TEXT}
+          {/* {STRING.DATING_APP_TEXT} */}
           </h1>
           {/* end::Title */}
 
           {/* begin::Text */}
           <div className='text-white fs-base text-center'>
-          {STRING.DATING_TEXT}
+          {/* {STRING.DATING_TEXT} */}
           </div>
           {/* end::Text */}
         </div>
