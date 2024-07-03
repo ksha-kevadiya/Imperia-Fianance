@@ -88,7 +88,7 @@ export const adminInitValues: AdminData = {
   email: "",
   country_id: "",
   isd_code: "",
-  mobile_number: "",
+  phone_number: "",
   password: "",
   photo: "",
   status: 1,
