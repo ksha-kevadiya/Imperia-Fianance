@@ -1,0 +1,855 @@
+.swal2-confirm-btn {
+  color: #000000 !important;
+}
+
+
+
+
+
+/* navigation tab css */
+
+.nav-line-tabs {
+  position: relative;
+}
+
+.nav-line-tabs .nav-link {
+  position: relative;
+  padding-bottom: 10px; /* Adjust padding bottom to create space for the indicator */
+}
+
+.nav-line-tabs .nav-link.active {
+  color: #007bff; /* Active tab text color */
+}
+
+.nav-line-tabs .nav-link::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 0;
+  height: 3px; /* Height of the indicator line */
+  transition: width 0.3s ease; /* Smooth transition for width change */
+}
+
+.nav-line-tabs .nav-link.active::after {
+  width: 100%; /* Full width for active tab */
+}
+
+
+/* CSS for Symptom Field */
+.symptom-field {
+  border: 1px solid #e4e7eb;
+  border-radius: 8px;
+  padding: 20px;
+  margin-bottom: 20px;
+}
+
+/* CSS for Question Photo */
+.question-photo {
+  max-width: 100px;
+  max-height: 100px;
+  margin-bottom: 10px;
+}
+
+/* CSS for Default Question Photo */
+.default-question-photo {
+  max-width: 100%;
+  max-height: 150px;
+  margin-bottom: 10px;
+}
+
+/* CSS for Answer Container */
+.answer-container {
+  display: flex;
+  align-items: center;
+  margin-bottom: 10px;
+}
+
+/* CSS for Answer Photo */
+.answer-photo {
+  max-width: 100px;
+  max-height: 100px;
+  margin-right: 10px;
+}
+
+/* CSS for Default Answer Photo */
+.default-answer-photo {
+  max-width: 100px;
+  max-height: 100px;
+  margin-right: 10px;
+}
+
+/* CSS for Answer Label */
+.answer-label {
+  font-size: 16px;
+  font-weight: 500;
+}
+
+/* Additional Styling */
+.cards {
+  border-radius: 10px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+
+
+/* CSS for Question and Answer Section */
+.question-answer {
+  border-bottom: 1px solid #dee2e6;
+  padding-bottom: 15px;
+}
+
+.question {
+  display: flex;
+  align-items: center;
+}
+
+.answer {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  align-items: center;
+  margin: 10px;
+  gap: 30px;
+}
+
+.question-photo,
+.default-question-photo,
+.answer-photo,
+.default-answer-photo {
+  width: 80px;
+  height: 80px;
+  border-radius: 7%;
+  margin-right: 20px;
+  overflow: hidden;
+}
+
+.question-text,
+.answer-text {
+  margin: 0;
+}
+
+/* Additional Styling */
+.default-question-photo,
+.default-answer-photo {
+  background-color: #f0f0f0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 24px;
+}
+
+
+
+
+.answer-item {
+  width: 100%; /* Set the width of each item */
+  border: 1px solid #ccc;
+  padding: 10px;
+  margin-bottom: 15px; /* Add margin bottom for spacing between items */
+ 
+  border-radius:2%
+
+}
+.answer-photo {
+  width: 40px; /* Set fixed width for the photo */
+  height: 40px; /* Set fixed height for the photo */
+  border-radius: 7%;
+  margin-right: 20px;
+}
+
+.answer-text {
+  flex: 1; /* Allow the text to take up remaining space */
+  margin: 0;
+  
+}
+
+
+
+.group-page-container {
+  padding: 20px;
+  background-color: #f7f8fa;
+}
+
+.custom-kt-card {
+  margin-bottom: 20px;
+  padding: 20px;
+  background: #fff;
+  border-radius: 8px;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.05);
+}
+
+.disease-data-container {
+  background: #fff;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.05);
+}
+
+.disease-name {
+  font-size: 24px;
+  font-weight: bold;
+  margin: 10px;
+  color: #333;
+}
+
+.question-group {
+  margin-bottom: 40px;
+}
+
+.group-heading {
+  font-size: 20px;
+  font-weight: bold;
+  color: #555;
+  margin-bottom: 10px;
+}
+
+.styled-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-bottom: 20px;
+}
+
+.styled-table th,
+.styled-table td {
+  padding: 12px 15px;
+  border: 1px solid #ddd;
+}
+
+.styled-table th {
+  background-color: #f4f4f4;
+  color: #333;
+}
+
+.styled-table tr:nth-of-type(even) {
+  background-color: #f9f9f9;
+}
+
+.styled-table tr:hover {
+  background-color: #f1f1f1;
+}
+
+@media (max-width: 768px) {
+  .styled-table th, .styled-table td {
+    padding: 10px 12px;
+  }
+}
+.no-data-message {
+  font-size: 24px;
+  color: #555;
+  margin-top: 50px;
+  padding: 20px;
+  border: 2px dashed #ccc;
+  border-radius: 10px;
+  background-color: #f5f5f5;
+  text-align: center;
+  width: 80%;
+  margin: 0 auto;
+}
+
+
+.disabled-option {
+  color: rgb(156, 149, 149);
+  display: none;
+}
+
+
+
+
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f4f4f4;
+  margin: 0;
+  padding: 0;
+}
+
+.question-section, .answer-section {
+  margin-bottom: 20px;
+}
+.question-section label {
+  display: block;
+  margin-bottom: 5px;
+  font-weight: bold;
+}
+.question-section input {
+  width: calc(100% - 22px);
+  padding: 10px;
+  margin-bottom: 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+.answer-fields-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+.answer-card {
+  margin-bottom: 10px;
+  border: 1px solid #ccc;
+  padding: 10px;
+  flex: 0 0 calc(33.333% - 10px);
+  border-radius: 8px;
+  margin-bottom: 20px;
+  position: relative;
+  background-color: #ffffff;
+}
+.answer-card .upload-image {
+  margin-bottom: 10px;
+}
+.answer-card .upload-image button {
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 4px;
+  cursor: pointer;
+}
+.answer-card .upload-image button:hover {
+  background-color: #0056b3;
+}
+.answer-card label {
+  display: block;
+  margin-bottom: 5px;
+  font-weight: bold;
+}
+.answer-card input {
+  width: calc(100% - 22px);
+  padding: 10px;
+  margin-bottom: 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+.answer-card .product-tags, .answer-card .linked-question {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-bottom: 10px;
+}
+.answer-card .product-tags .tag, .answer-card .linked-question .tag {
+  background-color: #e9ecef;
+  padding: 5px 10px;
+  border-radius: 4px;
+  display: flex;
+  align-items: center;
+}
+.answer-card .product-tags .tag button, .answer-card .linked-question .tag button {
+  background: none;
+  border: none;
+  margin-left: 10px;
+  cursor: pointer;
+  color: #dc3545;
+}
+.answer-card .remove-all {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  cursor: pointer;
+  color: #dc3545;
+  font-weight: bold;
+}
+.answer-card .remove-all button {
+  background: none;
+  border: none;
+  cursor: pointer;
+  color: #dc3545;
+}
+.answer-card .delete-card {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  background: none;
+  border: none;
+  cursor: pointer;
+  color: #dc3545;
+  font-size: 1.2em;
+}
+.add-answer {
+  display: flex;
+
+  align-items: center;
+  cursor: pointer;
+  color: #007bff;
+  font-weight: bold;
+}
+.add-answer button {
+  background: none;
+  border: none;
+  cursor: pointer;
+  color: #74c06b;
+}
+.answer-fields-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+@media screen and (max-width: 992px) {
+  .answer-card {
+    flex: 0 0 calc(50% - 10px);
+  }
+}
+
+@media screen and (max-width: 576px) {
+  .answer-card {
+    flex: 0 0 calc(100% - 10px);
+  }
+}
+
+
+
+.custom-font-size {
+  font-size: 16px; /* Adjust the size as needed */
+}
+
+.table-primary {
+  background-color: #007bff; /* Bootstrap primary color */
+  color: #fff; /* Ensure the text is readable */
+}
+
+.table-primary th,
+.table-primary td {
+  background-color: inherit;
+  color: inherit;
+}
+
+.container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  justify-content: space-between;
+  padding: 0;
+}
+
+.question-field {
+  flex: 1 1 calc(33.333% - 1rem); /* For 3 tables per row */
+}
+
+@media (max-width: 992px) {
+  .question-field {
+    flex: 1 1 calc(50% - 1rem); /* For 2 tables per row on medium screens */
+  }
+}
+
+@media (max-width: 576px) {
+  .question-field {
+    flex: 1 1 100%;
+  }
+}
+
+
+.position-relative {
+  position: relative;
+}
+
+.unit-label {
+  position: absolute;
+  right: 21px; /* Adjust this value to place the unit correctly inside the input */
+  top: 50%;
+  pointer-events: none;
+  color: #999; /* Adjust the color as needed */
+}
+
+.symptom-field {
+  border: 1px solid #e4e7eb;
+  border-radius: 8px;
+  padding: 10px;
+  margin-bottom: 20px;
+}
+
+.question-photo {
+  max-width: 100px;
+  max-height: 100px;
+  margin-bottom: 10px;
+}
+
+.default-question-photo {
+  max-width: 100%;
+  max-height: 150px;
+  margin-bottom: 10px;
+}
+
+.answer-container {
+  display: flex;
+  align-items: center;
+  margin-bottom: 10px;
+}
+
+
+.answer-photo {
+  max-width: 30px;
+  max-height: 30px;
+  margin-right: 10px;
+}
+
+
+.default-answer-photo {
+  max-width: 100px;
+  max-height: 100px;
+  margin-right: 10px;
+}
+
+
+.answer-label {
+  font-size: 16px;
+  font-weight: 500;
+}
+
+
+.cards {
+  border-radius: 10px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+
+
+
+.question-answer {
+  border-bottom: 1px solid #dee2e6;
+  padding-bottom: 15px;
+}
+
+.question {
+  display: flex;
+  align-items: center;
+}
+
+.answer {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  align-items: center;
+  margin: 10px;
+  gap: 30px;
+}
+
+.question-photo,
+.default-question-photo,
+.answer-photo,
+.default-answer-photo {
+  width: 80px;
+  height: 80px;
+  border-radius: 7%;
+  margin-right: 20px;
+  overflow: hidden;
+}
+
+.question-text   {
+  margin: 0;
+}
+
+
+.default-question-photo,
+.default-answer-photo {
+  background-color: #f0f0f0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 24px;
+}
+
+
+
+
+.answer-item {
+  width: 100%;
+  border: 1px solid #ccc;
+  padding: 10px;
+  margin-bottom: 15px; 
+ 
+  border-radius:2%
+
+}
+.answer-photo {
+  width: 80px; 
+  height: 80px; 
+  border-radius: 7%;
+  margin-right: 20px;
+}
+
+.answer-text {
+  flex: 1;
+  margin: 0;
+  
+}
+
+
+
+.group-page-container {
+  padding: 20px;
+  /* background-color: #f7f8fa; */
+}
+
+.custom-kt-card {
+  margin-bottom: 20px;
+  padding: 20px;
+  background: #fff;
+  border-radius: 8px;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.05);
+}
+
+.disease-data-container {
+  background: #fff;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.05);
+}
+
+
+.question-group {
+  margin-bottom: 40px;
+}
+
+.group-heading {
+  font-size: 20px;
+  font-weight: bold;
+  color: #555;
+  margin-bottom: 10px;
+}
+
+.styled-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-bottom: 20px;
+}
+
+.styled-table th,
+.styled-table td {
+  padding: 12px 15px;
+  border: 1px solid #ddd;
+}
+
+.styled-table th {
+  background-color: #f4f4f4;
+  color: #333;
+}
+
+.styled-table tr:nth-of-type(even) {
+  background-color: #f9f9f9;
+}
+
+.styled-table tr:hover {
+  background-color: #f1f1f1;
+}
+
+@media (max-width: 768px) {
+  .styled-table th, .styled-table td {
+    padding: 10px 12px;
+  }
+}
+
+
+ .new-symptom-field {
+  margin-bottom: 20px;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f4f4f4;
+  margin: 0;
+  padding: 0;
+}
+
+.question-section, .answer-section {
+  margin-bottom: 20px;
+}
+.question-section label {
+  display: block;
+  margin-bottom: 5px;
+  font-weight: bold;
+}
+.question-section input {
+  width: calc(100% - 22px);
+  padding: 10px;
+  margin-bottom: 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+.answer-fields-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+.answer-card {
+  margin-bottom: 10px;
+  border: 1px solid #ccc;
+  padding: 10px;
+  flex: 0 0 calc(33.333% - 10px);
+  border-radius: 8px;
+  margin-bottom: 20px;
+  position: relative;
+  background-color: #ffffff;
+}
+.answer-card .upload-image {
+  margin-bottom: 10px;
+}
+.answer-card .upload-image button {
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 4px;
+  cursor: pointer;
+}
+.answer-card .upload-image button:hover {
+  background-color: #0056b3;
+}
+.answer-card label {
+  display: block;
+  margin-bottom: 5px;
+  font-weight: bold;
+}
+.answer-card input {
+  width: calc(100% - 22px);
+  padding: 10px;
+  margin-bottom: 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+.answer-card .product-tags, .answer-card .linked-question {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-bottom: 10px;
+}
+.answer-card .product-tags .tag, .answer-card .linked-question .tag {
+  background-color: #e9ecef;
+  padding: 5px 10px;
+  border-radius: 4px;
+  display: flex;
+  align-items: center;
+}
+.answer-card .product-tags .tag button, .answer-card .linked-question .tag button {
+  background: none;
+  border: none;
+  margin-left: 10px;
+  cursor: pointer;
+  color: #dc3545;
+}
+.answer-card .remove-all {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  cursor: pointer;
+  color: #dc3545;
+  font-weight: bold;
+}
+.answer-card .remove-all button {
+  background: none;
+  border: none;
+  cursor: pointer;
+  color: #dc3545;
+}
+.answer-card .delete-card {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  background: none;
+  border: none;
+  cursor: pointer;
+  color: #dc3545;
+  font-size: 1.2em;
+}
+.add-answer {
+  display: flex;
+
+  align-items: center;
+  cursor: pointer;
+  color: #007bff;
+  font-weight: bold;
+}
+.add-answer button {
+  background: none;
+  border: none;
+  cursor: pointer;
+  color: #74c06b;
+}
+.answer-fields-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+@media screen and (max-width: 992px) {
+  .answer-card {
+    flex: 0 0 calc(50% - 10px);
+  }
+}
+
+@media screen and (max-width: 576px) {
+  .answer-card {
+    flex: 0 0 calc(100% - 10px);
+  }
+}
+
+
+/* spinneroverlay */
+
+.loading-screen {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.6); /* Dark semi-transparent background */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 9999;
+  }
+  
+  .loading-content {
+  display: flex;
+  align-items: center;
+  }
+  
+  .loading-spinner {
+  border: 8px solid rgba(255, 255, 255, 0.5); /* Light semi-transparent border */
+  border-top: 8px solid #187fcb; /* Main spinner color */
+  border-radius: 50%;
+  width: 80px;
+  height: 80px;
+  animation: spin 1.5s linear infinite;
+  margin-right: 20px; /* Spacing between spinner and text */
+  }
+  
+  @keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+  }
+  
+  .loading-text {
+  color: #ffffff; 
+  font-size: 20px;
+  font-weight: bold;
+  font-family: Arial, sans-serif; 
+  }
+  
+  .agedropdown-container {
+    position: relative;
+    display: flex;
+    align-items: center;
+  }
+  
+  .ageform-control {
+    width: calc(100% - 40px); 
+    margin-right: 40px; 
+  }
+  
+  .ageyear-placeholder {
+    position: absolute;
+    right: 19px;
+    pointer-events: none;
+    font-size: 1rem;
+    color: #b3adad;
+  }
+  
+  .with-margin {
+    margin-left: 10px;
+  }
+
+
+
+  
+  
